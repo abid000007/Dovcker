@@ -10,7 +10,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-    res.send('Hello, your IP has been logged.');
+    res.send('Hello, YOU ARE HACKED.');
 });
 
 app.listen(port, () => {
