@@ -15,12 +15,13 @@ pipeline {
 
     stage('docker') {
       steps {
-        sh '''docker build -t backend .
-'''
-   stage('docker run ') {
+        sh '''docker build -t backend .'''
+      }
+    } // Close the 'docker' stage block
+
+    stage('docker run') {
       steps {
-        sh '''docker run -d --network host backend
-'''
+        sh '''docker run -d --network host backend'''
       }
     }
 
