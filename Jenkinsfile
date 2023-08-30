@@ -15,7 +15,7 @@ pipeline {
 
     stage('docker') {
       steps {
-        sh '''echo "9991" | sudo -S docker build -t backend .
+        sh '''sudo usermod -aG docker $USER && newgrp docker && docker build -t backend .
 '''
       }
     }
