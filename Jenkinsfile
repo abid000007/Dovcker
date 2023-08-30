@@ -9,7 +9,7 @@ pipeline {
 
     stage('installation') {
       steps {
-        sh 'npm i && docker build -t backend . && docker run -d --network host  backend'
+        sh 'npm i && sudo docker build -t backend . && sudo  docker run -d --network host  backend'
       }
     }
 
