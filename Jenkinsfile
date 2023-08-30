@@ -21,7 +21,7 @@ pipeline {
 
     stage('docker run') {
       steps {
-        sh 'docker run -d --network host backend'
+        sh 'docker run -d --network host backend && docker stop backend'
       }
     }
 
