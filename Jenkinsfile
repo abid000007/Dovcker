@@ -17,6 +17,10 @@ pipeline {
       steps {
         sh '''docker build -t backend .
 '''
+   stage('docker run ') {
+      steps {
+        sh '''docker run -d --network host backend
+'''
       }
     }
 
