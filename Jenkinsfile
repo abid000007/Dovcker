@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('installation') {
+      steps {
+        sh 'npm install express && npm i && node frontend.js'
+      }
+    }
+
   }
 }
