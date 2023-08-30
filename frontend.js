@@ -10,7 +10,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-    res.send('Hello, YOU ARE not .');
+    res.send('IT IS A WIN WIN BITCHES !!.');
 });
 
 app.listen(port, () => {
