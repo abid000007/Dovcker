@@ -9,7 +9,7 @@ pipeline {
 
     stage('installation') {
       steps {
-        sh 'npm install express && npm i '
+        sh 'npm i '
       }
     }
 
