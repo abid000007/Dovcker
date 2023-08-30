@@ -1,11 +1,14 @@
+# Use an official Node.js runtime as the base image
 FROM node:14
 
+# Set the working directory inside the container
 WORKDIR /usr/src/app
 
-COPY package*.json ./
+# Copy the frontend.js file to the working directory
+COPY frontend.js .
 
-RUN npm install 
+# Install app dependencies
+RUN npm install express
 
-EXPOSE 3000 
-
-CMD ["node", "frontend.js" ]
+# Specify the command to run your application
+CMD ["node", "frontend.js"]
