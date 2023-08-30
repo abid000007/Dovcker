@@ -15,7 +15,7 @@ pipeline {
 
     stage('docker') {
       steps {
-        sh ' sudo docker build -t backend . && sudo  docker run -d --network host  backend'
+        sh ' docker build -t backend . &&  docker run -d --network host  backend'
       }
     }
 
