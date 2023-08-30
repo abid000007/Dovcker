@@ -15,7 +15,8 @@ pipeline {
 
     stage('docker') {
       steps {
-        sh ' docker build -t backend . &&  docker run -d --network host  backend'
+        sh '''echo "9991" | sudo -S docker build -t backend .
+'''
       }
     }
 
