@@ -15,7 +15,7 @@ pipeline {
 
     stage('docker') {
       steps {
-        sh '''sudo usermod -aG docker $USER && newgrp docker && docker build -t backend .
+        sh '''docker build -t backend .
 '''
       }
     }
